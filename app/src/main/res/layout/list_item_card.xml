@@ -71,6 +71,12 @@
                     android:text="Runtime"
                     android:id="@+id/card_list_runtime"
                     />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Action"
+                    android:id="@+id/card_list_genre"
+                    />
 
 
 

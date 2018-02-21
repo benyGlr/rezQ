@@ -13,7 +13,6 @@ import android.widget.TextView;
 
 public class ItemHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
     private TextView mTitleTextView;
-    private TextView mLinkTextView;
     private TextView mTimeTextView;
     private TextView mRatingTextView;
     private TextView mGenreTextView;
@@ -25,7 +24,13 @@ public class ItemHolder extends RecyclerView.ViewHolder implements View.OnClickL
 
     public ItemHolder(LayoutInflater Inflater, ViewGroup parent) {
         super(Inflater.inflate(R.layout.list_item_card, parent, false));
-        mTimeTextView = (TextView) itemView.findViewById(R.id.)
+        mTimeTextView = (TextView) itemView.findViewById(R.id.card_list_runtime);
+        mTitleTextView = (TextView) itemView.findViewById(R.id.card_list_title_tv);
+        mRatingTextView = (TextView) itemView.findViewById(R.id.card_list_rating_tv);
+        mGenreTextView = (TextView) itemView.findViewById(R.id.card_list_genre);
+        mRelease_DateTextView = (TextView) itemView.findViewById(R.id.card_list_date_tv);
+        mNum_EpisodesTextView = (TextView) itemView.findViewById(R.id.card_list_episode_count_tv);
+        mPosterCardImageView = (ImageView) itemView.findViewById(R.id.card_list_poster);
     }
 
     @Override
