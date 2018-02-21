@@ -24,10 +24,65 @@
             android:id="@+id/card_list_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:weightSum="2"
             android:background="@drawable/drawable_selector"
             >
+
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/card_list_poster"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Title"
+                    android:id="@+id/card_list_title_tv"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*****"
+                    android:id="@+id/card_list_rating_tv"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00-12-12"
+                    android:id="@+id/card_list_date_tv"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15 Episodes"
+                    android:id="@+id/card_list_episode_count_tv"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Runtime"
+                    android:id="@+id/card_list_runtime"
+                    />
+
+
+
+
+
+
+
+            </LinearLayout>
+
+
+
+
 
 
 
