@@ -12,8 +12,7 @@ public class Item {
     private String mLink;
     private int mTime;
     private int rating;
-    //!!! TEMP MAKING GENRE STRING FOR DB TO WORK NEEDS TO BE FIXED ASAP!!!
-    private String genre;
+    private Genres genre;
     private String Release_Date;
     private int num_episodes;
     private int photoID;
@@ -77,11 +76,11 @@ public class Item {
     }
 
     public String getGenre() {
-        return genre;
+        return genre.toString();
     }
 
     public void setGenre(String genre) {
-        this.genre = genre;
+        this.genre = Genres.valueOf(genre);
     }
 
     public String getRelease_Date() {
