@@ -36,11 +36,11 @@ public class Item {
         this.photoID = photoID;
     }
 
-    public UUID getMid() {
+    public UUID getId() {
         return mid;
     }
 
-    public void setMid(UUID mid) {
+    public void setId(UUID mid) {
         this.mid = mid;
     }
 
