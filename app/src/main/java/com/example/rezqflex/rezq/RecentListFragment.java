@@ -33,7 +33,7 @@ public class RecentListFragment extends Fragment {
         mAddItemFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                
+
             }
         });
 

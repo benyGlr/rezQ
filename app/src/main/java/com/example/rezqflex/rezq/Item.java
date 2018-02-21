@@ -12,14 +12,19 @@ public class Item {
     private String mLink;
     private int mTime;
     private int rating;
-    private Genres genre;
+    //!!! TEMP MAKING GENRE STRING FOR DB TO WORK NEEDS TO BE FIXED ASAP!!!
+    private String genre;
     private String Release_Date;
     private int num_episodes;
     private int photoID;
 
+
     public Item(){
-        super();
-        mid = UUID.randomUUID();
+        this(UUID.randomUUID());
+    }
+
+    public Item(UUID id){
+        mid = id;
 
     }
 
@@ -71,11 +76,11 @@ public class Item {
         this.rating = rating;
     }
 
-    public Genres getGenre() {
+    public String getGenre() {
         return genre;
     }
 
-    public void setGenre(Genres genre) {
+    public void setGenre(String genre) {
         this.genre = genre;
     }
 
