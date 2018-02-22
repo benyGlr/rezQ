@@ -34,7 +34,13 @@ public class ItemHolder extends RecyclerView.ViewHolder implements View.OnClickL
     }
 
     public void bind(Item item){
-
+        mTitleTextView.setText(item.getmTitle());
+        mTimeTextView.setText(item.getmTime());
+        mRatingTextView.setText(item.getRating());
+        mGenreTextView.setText(item.getGenre());
+        mRelease_DateTextView.setText(item.getRelease_Date());
+        mNum_EpisodesTextView.setText(item.getNum_episodes());
+        //mPosterCardImageView.setImageResource();
     }
 
     @Override

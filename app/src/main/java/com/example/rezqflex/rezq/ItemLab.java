@@ -108,10 +108,4 @@ public class ItemLab {
         values.put(DbSchema.DataTable.Cols.PHOTO_ID, item.getPhotoID());
         return values;
     }
-
-
-
-
-
-
 }
