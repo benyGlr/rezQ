@@ -33,6 +33,10 @@ public class ItemHolder extends RecyclerView.ViewHolder implements View.OnClickL
         mPosterCardImageView = (ImageView) itemView.findViewById(R.id.card_list_poster);
     }
 
+    public void bind(Item item){
+
+    }
+
     @Override
     public void onClick(View view) {
 

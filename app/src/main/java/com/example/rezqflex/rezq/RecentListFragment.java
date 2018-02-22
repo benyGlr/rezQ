@@ -9,6 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.List;
+
 /**
  * Created by danielg on 2018-02-20.
  */
@@ -16,6 +18,13 @@ import android.view.ViewGroup;
 public class RecentListFragment extends Fragment {
     private RecyclerView mRecentsListRecyclerView;
     private FloatingActionButton mAddItemFab;
+    private Callbacks mCallbacks;
+
+
+
+    public interface Callbacks{
+        void onItemSelected(Item item);
+    }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -34,6 +43,13 @@ public class RecentListFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
+                Item item = new Item();
+                ItemLab.get(getActivity()).addItem(item);
+                uiRefresh();
+                mCallbacks.onItemSelected(item);
+
+
+
             }
         });
 
@@ -41,5 +57,10 @@ public class RecentListFragment extends Fragment {
 
 
         return view;
+    }
+
+    private void uiRefresh() {
+        ItemLab itemLab = ItemLab.get(getActivity());
+        List<Item> items = itemLab.getItems();
     }
 }
