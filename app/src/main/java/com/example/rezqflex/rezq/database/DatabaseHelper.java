@@ -14,6 +14,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final int VERSION = 1;
     private static final String DATABASE_NAME = "itemBase.db";
 
+
     public DatabaseHelper(Context context){
         super(context,DATABASE_NAME,null,VERSION);
     }
