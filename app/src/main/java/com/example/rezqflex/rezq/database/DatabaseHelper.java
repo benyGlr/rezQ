@@ -22,14 +22,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL("create table "+ DbSchema.DataTable.NAME +"("+
                 "_id integer primary key autoincrement, " +
-                DbSchema.DataTable.Cols.UUID+", "+
-                DbSchema.DataTable.Cols.TITLE+", "+
-                DbSchema.DataTable.Cols.LINK+", "+
-                DbSchema.DataTable.Cols.RATING+", "+
-                DbSchema.DataTable.Cols.GENRE+", "+
-                DbSchema.DataTable.Cols.RELEASE_DATE+", "+
-                DbSchema.DataTable.Cols.NUM_EPISODES+", "+
-                DbSchema.DataTable.Cols.PHOTO_ID+ ")"
+                DbSchema.DataTable.Cols.UUID+" INTEGER PRIMARY KEY, "+
+                DbSchema.DataTable.Cols.TITLE+" TEXT NOT NULL, "+
+                DbSchema.DataTable.Cols.LINK+" TEXT NOT NULL, "+
+                DbSchema.DataTable.Cols.RATING+" INTEGER DEFAULT 0, "+
+                DbSchema.DataTable.Cols.GENRE+" TEXT DEFAULT 'Unavailable', "+
+                DbSchema.DataTable.Cols.RELEASE_DATE+"CALENDAR DEFAULT '0-0-0', "+
+                DbSchema.DataTable.Cols.NUM_EPISODES+" INTEGER DEFAULT 0, "+
+                DbSchema.DataTable.Cols.PHOTO_ID+ " TEXT DEFAULT 'Unavailable');"
         );
 
 
